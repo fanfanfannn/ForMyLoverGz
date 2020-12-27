@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>大猫专属登录页</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--图标-->
+	<!-- <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css"> -->
+	<!--布局框架-->
+	<link rel="stylesheet" type="text/css" href="./css/util.css">
+	<!--主要样式-->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<!--引入elementui-->
+	<link rel="stylesheet" href="./css/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="damao" class="login">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<div class="login100-pic js-tilt" data-tilt>
+				<img src="img/damao.png" alt="IMG">
+				<!-- <audio src="./music/MitiS - Open Window (Original Mix) - remix.mp3"  controls="true" loop="true" autoplay=true></audio> --> 
+			</div>
+
+			<form class="login100-form validate-form" method="POST" autocomplete="off">
+				<span class="login100-form-title">
+					只有大猫可以登录哦
+				</span>
+
+				<div class="wrap-input100 validate-input">
+					<input v-model="user.username" class="input100" type="text" name="username" placeholder="用户名/手机号">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="el-icon-user-solid" aria-hidden="true"></i>
+					</span>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<input v-model="user.password" class="input100" type="password" name="password" placeholder="密码">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="el-icon-s-tools" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="container-login100-form-btn">
+					<el-link @click="validateInfo()" icon="el-icon-success" class="login100-form-btn" :underline="false"  onkeydown="validateInfo()">登录</el-link>
+					<!-- <el-button @click="validateInfo" icon="el-icon-success" class="login100-form-btn" type="success" round>登录</el-button> -->
+				</div>
+				<div class="text-center p-t-12">
+					<el-button type="info" @click="showMessage()" size="medium" round><i class="el-icon-question" aria-hidden="true">
+					</i>找回密码</el-button>
+				</div >
+				<div class="text-center p-t-60">
+					<!-- <audio src="./music/胡彦斌 - 月光.mp3" controls="true" loop="true" autoplay=true></audio> -->
+				</div>
+				<div class="text-center p-t-70">
+					CreatedBy 凡凡
+				</div>
+				
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script src="./js/vue.js"></script>
+<script src="./js/clickstyle.js" />
+<script src="./js/jquery.min.js"></script>
+<script src="./css/element-ui/lib/index.js"></script>
+
+
+<script>
+	new Vue({
+		el:"#damao",
+		data:{
+			user:{},
+			songs:{},
+		},
+		methods:{
+			showMessage(){
+				this.$message({
+          			message: '用户名是你的名字或手机号，密码是我的名字或手机号',
+          			type: 'warning'
+        		});
+			},
+			validateInfo(){
+				let username = this.user.username;
+				let password = this.user.password;
+				if(username == 'gaozheng' ||  username == '13710436605'){
+					if(password == "heqinke" || password == '15696109615'){
+						window.location.href="./img/ForMyLover.html"
+					}else{
+						this.$message.error("密码错误！");
+					}
+				}else {
+					this.$message.error("用户名或手机号错误！");
+				} 
+				
+			},
+		}
+	});
+
+	
+	
+</script>
+
+</html>
