@@ -59,8 +59,8 @@
                         <el-menu-item-group>
                             <template slot="title">分组一</template>
                             <el-menu-item index="1-1" >
-                                <a @click="toBirthdayInfo()" target="right" >关于生日</a>
-                                <!-- <el-link id="birthday" :underline="false"  target="right" @click="toBirthdayInfo()">关于生日</el-link> -->
+                                <a @click="toBirthdayInfo()" target="right" >xxxx</a>
+                                <!-- <el-link id="birthday" :underline="false"  target="right" @click="toBirthdayInfo()">xxxx</el-link> -->
                             </el-menu-item>
                             <el-menu-item index="1-2">选项2</el-menu-item>
                         </el-menu-item-group>
@@ -75,7 +75,7 @@
                 </el-menu>
             </el-aside>
             <el-container>
-                <el-header>阿猫好！感谢打开这个网页</el-header>
+                <el-header>感谢打开这个网页</el-header>
                 
                     <el-container>
                         <iframe name="right" class="el-main"  :src="webSite" width="100%" height="670px" frameborder="0"></iframe>
@@ -103,7 +103,7 @@
         },
         methods: {
             toBirthdayInfo(){
-                this.webSite="https://space.bilibili.com/2868452"; 
+                this.webSite=""; 
                 //$("#birthday").herf=webSite;
             } 
         }

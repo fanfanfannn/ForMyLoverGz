@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<title>大猫专属登录页</title>
+	<title>The Gift For AMao</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--图标-->
@@ -24,7 +24,7 @@
 
 			<form class="login100-form validate-form" method="POST" autocomplete="off">
 				<span class="login100-form-title">
-					只有大猫可以登录哦
+					只有可以登录哦
 				</span>
 
 				<div class="wrap-input100 validate-input">
@@ -85,8 +85,8 @@
 			validateInfo(){
 				let username = this.user.username;
 				let password = this.user.password;
-				if(username == 'gaozheng' ||  username == '13710436605'){
-					if(password == "heqinke" || password == '15696109615'){
+				if(username == '' ||  username == ''){
+					if(password == "" || password == ''){
 						window.location.href="./img/ForMyLover.html"
 					}else{
 						this.$message.error("密码错误！");
